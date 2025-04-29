@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Hash Banking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color:rgb(88, 33, 33); /* Semi-transparent header */
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #ffffff;
+            font-size: 2.5rem;
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px 0;
+            gap: 20px;
+        }
+
+        .service-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .service-box i {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #a52a2a;
+        }
+
+        .service-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+        }
+
+        #scroll {
+            width: 100vw;
+            height: 5px;
+            transition: all linear .2s;
+            color: #a53434;
+            background-color: #a53434;
+            position: sticky;
+            top: 0px;
+            z-index: 9999;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer-section p, .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            display: flex;
+        }
+
+        .social-icons a {
+            margin-right: 10px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f6f6f6;
+            color: #333;
+        }
+
+        .services-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            width: 45%;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #555;
+        }
+
+        .service-card i {
+            color: #6c63ff;
+            margin-right: 10px;
+        }
+
+        .read-more {
+            margin-top: 10px;
+            display: inline-block;
+            font-size: 0.9rem;
+            color: #6c63ff;
+            text-decoration: none;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .why-choose-us {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 50px;
+        }
+
+        .why-choose-us img {
+            width: 50%;
+            border-radius: 8px;
+        }
+
+        .why-choose-us-content {
+            width: 45%;
+            padding-left: 20px;
+        }
+
+        .why-choose-us-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .why-choose-us-content p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .feature-item i {
+            font-size: 1.5rem;
+            color: #6c63ff;
+            margin-right: 10px;
+        }
+
+        .feature-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .feature-item p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="scroll"></div>
+
+    <!-- Header -->
+    <header>
+        <h1>Our Services</h1>
+    </header>
+    <div class="services-section"  data-aos="fade-left" data-aos-id="super-duper">
+        <div class="service-card">
+            <h3><i class="fas fa-handshake"></i> Consulting Services</h3>
+            <p>This strategy encompasses a wide range of services from online marketing and social media to website optimization.</p>
+        </div>
+
+        <div class="service-card">
+            <h3><i class="fas fa-laptop-code"></i> Digital Solution</h3>
+            <p>Providing businesses and individuals with a website that aligns with their brand’s digital needs.</p>
+           
+        </div>
+
+        <div class="service-card">
+            <h3><i class="fas fa-chart-pie"></i> Financial Consultancy</h3>
+            <p>Low-fidelity visual or website app’s layout and structure strategy to improve financial operations.</p>
+            
+        </div>
+
+        <div class="service-card">
+            <h3><i class="fas fa-bullseye"></i> Business Strategy</h3>
+            <p>Content creation and integration is a pivotal aspect of web design and solutions for any growing business.</p>
+            
+        </div>
+
+        <div class="service-card">
+            <h3><i class="fas fa-piggy-bank"></i> Investment Advisory</h3>
+            <p>Offering expert advice on investment strategy to help clients make sound financial decisions.</p>
+        
+        </div>
+
+        <div class="service-card">
+            <h3><i class="fas fa-drafting-compass"></i> Digital Planning</h3>
+            <p>Integration content creation and planning, a critical aspect of the web development sector.</p>
+        </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="why-choose-us"  data-aos="fade-right" data-aos-id="super-duper">
+        <img src="what-is-vishing.jpg" alt="Team Image">
+        <div class="why-choose-us-content">
+            <h2>Take Control & Learn About Your Money</h2>
+            <p>At Hash Banking, we provide expert consultancy, 24/7 customer support, and a professional team to help you make the most of your financial journey.</p>
+            
+            <div class="features">
+                <div class="feature-item">
+                    <i class="fas fa-briefcase"></i>
+                    <div>
+                        <h4>Best Business Consulting</h4>
+                        <p>Providing tailored solutions to fit your business needs and goals.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fas fa-headset"></i>
+                    <div>
+                        <h4>24/7 Customer Support</h4>
+                        <p>Our dedicated team is available around the clock to help with any questions or concerns.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <h4>Professional Team</h4>
+                        <p>Experienced professionals dedicated to helping you achieve financial success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Services Section -->
+    <div class="services-container" data-aos="slide-up" data-aos-id="super-duper">
+        <!-- Service 1 -->
+        <div class="service-box" data-aos="zoom-out">
+            <i class="fas fa-university"></i>
+            <h3>Decentralized Banking</h3>
+            <p>Experience a borderless banking system where you have full control of your assets, secured by blockchain technology.</p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-box">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Enhanced Security</h3>
+            <p>Our two-factor authentication and biometric security ensure your accounts and transactions remain safe from threats.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-box">
+            <i class="fas fa-chart-line"></i>
+            <h3>Crypto Investment</h3>
+            <p>Invest in the most promising cryptocurrencies with expert insights, allowing you to grow and diversify your wealth.</p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-box">
+            <i class="fas fa-robot"></i>
+            <h3>AI-Powered Financial Advice</h3>
+            <p>Let our AI-driven advisors guide you to make smarter financial decisions, optimizing your savings and investments.</p>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-box">
+            <i class="fas fa-globe"></i>
+            <h3>Global Transactions</h3>
+            <p>Send and receive payments across the globe in an instant, with no hidden fees or barriers between borders.</p>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-box">
+            <i class="fas fa-lock"></i>
+            <h3>Privacy Protection</h3>
+            <p>Your privacy is our priority. All of your financial data is encrypted and securely stored, away from prying eyes.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+   
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Hash Banking</h4>
+                <p>Your partner in the digital financial revolution. Transforming traditional banking with cutting-edge technology.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="Nav.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect with Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/login.php/" class="fa fa-facebook"></a>             
+                    <a href="https://x.com/?lang=en-in" class="fa fa-twitter"></a>
+                    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                    <a href="https://in.linkedin.com/" class="fa fa-linkedin"></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@hashbanking.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hash Banking. All rights reserved.</p>
+        </div>
+    </footer>
+
+  
+    <script>
+        window.addEventListener("scroll", function() {
+            let fullheight = document.body.scrollHeight - window.innerHeight;
+            let scroll = window.pageYOffset;
+            let progress = (scroll / fullheight) * 100;
+            document.getElementById("scroll").style.width = `${progress}vw`;
+        });
+    </script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 2000,
+            offset: 60,
+        });
+    </script>
+</body>
+</html>

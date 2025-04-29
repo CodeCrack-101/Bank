@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+        }
+
+        #scroll {
+            width: 100vw;
+            height: 5px;
+            transition: all linear .2s;
+            color: #a53434;
+            background-color: #a53434;
+            position: sticky;
+            top: 0px;
+            z-index: 9999;
+        }
+        footer {
+            background-color: #000000;
+            color: white;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer-section p, .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            display: flex;
+        }
+
+        .social-icons a {
+            margin-right: 10px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .cyber-security-section {
+            background-color: #fff;
+            padding: 60px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cyber-security-section img {
+            width: 45%;
+            border-radius: 8px;
+        }
+
+        .cyber-security-content {
+            width: 50%;
+            padding-left: 20px;
+        }
+
+        .cyber-security-content h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .cyber-security-content p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .services-list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .services-list div {
+            display: flex;
+            align-items: center;
+        }
+
+        .services-list i {
+            color: #007bff;
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        .services-list span {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        /* Process Section */
+        .process-section {
+            background-color: #f9f9f9;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 50px auto;
+            border-radius: 8px;
+        }
+
+        .process-section h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .process-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .process-card h4 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .process-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Call to Action Section */
+        .cta-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 50px;
+            background-color: white;
+            max-width: 1200px;
+            margin: 50px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-section img {
+            width: 40%;
+            border-radius: 8px;
+        }
+
+        .cta-content {
+            width: 55%;
+        }
+
+        .cta-content h3 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .cta-content p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .cta-button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        .cta-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-info div {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .cta-info i {
+            color: #007bff;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="scroll"></div>
+
+    <!-- Cybersecurity Service Section -->
+    <div class="cyber-security-section" data-aos="fade-left">
+        <img src="cyb.avif" alt="Cybersecurity Image" height="350px" width="100px">
+        <div class="cyber-security-content">
+            <h2>Security</h2>
+            <p>Our team of professionals provides comprehensive solutions to secure your digital assets, network, and infrastructure.</p>
+            <div class="services-list">
+                <div><i class="fas fa-network-wired"></i><span>Network Security</span></div>
+                <div><i class="fas fa-cloud"></i><span>Cloud Security</span></div>
+                <div><i class="fas fa-shield-alt"></i><span>Website Security</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Process Section -->
+    <div class="process-section" data-aos="fade-up">
+        <h2>Our Team Is Ready To Help You Protect You From Frauds</h2>
+        <div class="process-grid">
+            <div class="process-card">
+                <h4>Use Strong, Unique Passwords</h4>
+                <p>Use a combination of letters, numbers, and symbols for each online account.
+                    Avoid using the same password for multiple services, and consider using a password manager to securely store and manage passwords.</p>
+            </div>
+            <div class="process-card">
+                <h4>Enable Two-Factor Authentication (2FA)</h4>
+                <p>Always enable 2FA on your online accounts where available. This adds an extra layer of security by requiring a second form of identification, such as a text message or authentication app, along with your password.</p>
+            </div>
+            <div class="process-card">
+                <h4>Be Cautious of Phishing Scams</h4>
+                <p>Avoid clicking on links or downloading attachments from suspicious or unsolicited emails, texts, or websites. Phishing attacks are designed to steal personal information, and scammers often impersonate legitimate businesses to trick you.</p>
+            </div>
+            <div class="process-card">
+                <h4>Regularly Monitor Your Financial Accounts</h4>
+                <p>Frequently check your bank statements, credit card transactions, and online accounts for any unauthorized activities. Report suspicious transactions immediately to your bank or credit card provider.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section" data-aos="fade-up">
+        <img src="cons.jpg" alt="Consulting Image">
+        <div class="cta-content">
+            <h3>Online-Fraud Has Become A Critical Concern</h3>
+            <p>online fraud has indeed become a critical concern in today's digital world. As more transactions, personal data, and communications shift to the internet, cybercriminals have developed sophisticated methods to exploit vulnerabilities.</p>
+        </div>
+    </div>
+   
+    <footer>
+        <div class="footer-content">
+            <div class="contact-infok">
+                <span class="F">Hash-</span> <span class="ff" style="color: #a53434;">Bank</span>
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-address-card"></i>Azad Nagar, Ghatkopar West, Mumbai - 400086</p>
+                <p><i class="fas fa-phone"></i> 9321-28000-400</p>
+                <p><i class="fas fa-envelope"></i> HashBank10@gmail.com</p>
+                <div class="social-icons"  data-aos="slide-up" data-aos-id="super-duper">
+                    <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="bank-fraud">
+                <div class="bank-fraud-text">
+                    <h4>Protect Yourself from <span> Bank Fraud</span></h4>
+                    <p>At Hash-Bank, your security is our top priority. Remember to stay vigilant about suspicious activities, phishing scams, and fraudulent communications. Always verify requests for sensitive information and report anything unusual immediately.</p>
+                    <p>Stay informed, protect your personal data, and never share OTPs or passwords with anyone, even if they claim to be from the bank.</p>
+                </div>
+                <div class="imggg01" data-aos="zoom-in-right" data-aos-id="super-duper">
+                    <img src="premium.png" alt="Fraud Prevention Image">
+                </div>
+            </div>
+        </div>
+    </footer>
+  
+    <script>
+        window.addEventListener("scroll", function() {
+            let fullheight = document.body.scrollHeight - window.innerHeight;
+            let scroll = window.pageYOffset;
+            let progress = (scroll / fullheight) * 100;
+            document.getElementById("scroll").style.width = `${progress}vw`;
+        });
+    </script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 2000,
+            offset: 60,
+        });
+    </script>
+</body>
+</html>
